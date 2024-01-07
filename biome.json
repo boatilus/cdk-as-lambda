@@ -1,0 +1,42 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "files": {
+    "ignore": [
+      ".next",
+      ".vercel",
+      "*.d.ts",
+      "*.js",
+      "*.spec.ts",
+      "**/package.json",
+      "dist",
+      "wasm",
+      "webpack-stats.json"
+    ]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "lineWidth": 80
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "semicolons": "asNeeded"
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "style": {
+        "noCommaOperator": "off",
+        "noParameterAssign": "off",
+        "noUnusedTemplateLiteral": "off"
+      },
+      "suspicious": {
+        "noAssignInExpressions": "off",
+        "noConstEnum": "off"
+      }
+    }
+  }
+}
